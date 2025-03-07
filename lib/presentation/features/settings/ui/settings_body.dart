@@ -2,6 +2,7 @@ import 'package:auto_route/auto_route.dart';
 import 'package:bold_bloc/presentation/routes/router.gr.dart';
 import 'package:flutter/material.dart';
 
+@RoutePage(name: 'SettingsMainRoute')
 class SettingsBody extends StatelessWidget {
   const SettingsBody({super.key});
 
@@ -17,14 +18,14 @@ class SettingsBody extends StatelessWidget {
             title: const Text('Home Settings'),
             leading: const Icon(Icons.home),
             onTap: () {
-              context.router.push(const HomeSettingsRoute());
+              context.router.navigate(const HomeSettingsRoute());
             },
           ),
           ListTile(
             title: const Text('User Settings'),
             leading: const Icon(Icons.person),
             onTap: () {
-              context.router.push(const UserSettingsRoute());
+              context.router.navigate(const UserSettingsRoute());
             },
           ),
         ],
