@@ -170,3 +170,7 @@ app.*.symbols
 
 # Ignore generated router files
 *.gr.dart
+
+# exclude the API key from version control
+env.g.dart
+.env
