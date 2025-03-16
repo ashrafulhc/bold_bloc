@@ -1,4 +1,5 @@
 import 'package:auto_route/auto_route.dart';
+import 'package:bold_bloc/env/env.dart';
 import 'package:bold_bloc/presentation/features/home/cubit/home_cubit.dart';
 import 'package:bold_bloc/presentation/routes/router.gr.dart';
 import 'package:flutter/material.dart';
@@ -30,6 +31,18 @@ class HomeBody extends StatelessWidget {
                 context.router.push(const SettingsRoute());
               },
               child: const Text('Go to Settings'),
+            ),
+            ElevatedButton(
+              onPressed: () {
+                context.router.push(const LoginRoute());
+              },
+              child: const Text('Go to Login'),
+            ),
+            ElevatedButton(
+              onPressed: () {
+                debugPrint(Env.apiKey);
+              },
+              child: const Text('Print Env'),
             ),
           ],
         ),
